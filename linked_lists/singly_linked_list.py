@@ -10,6 +10,14 @@ class SingleLinkedList:
 
     def __iter__(self):
         return LinkedListIterator(self.head)
+    
+    def __str__(self):
+        nodes = []
+        temp = self.head
+        while temp:
+            nodes.append(str(temp.data))
+            temp = temp.next
+        return " -> ".join(nodes) + " -> None"
 
     # Insert at the beginning
     def insert_at_start(self, data):
@@ -128,6 +136,17 @@ class SingleLinkedList:
             slow = slow.next
             fast = fast.next.next
         return slow.data if slow else None
+    
+    def to_list(self):
+        result = []
+        temp = self.head
+        while temp:
+            result.append(temp.data)
+            temp = temp.next
+        return result
+    
+    def clear(self):
+        self.head = None
 
 
 class LinkedListIterator:
@@ -172,3 +191,12 @@ if __name__ == "__main__":
     print("Iterating through the list:")
     for item in sll:
         print(item, end=" -> ")  # Outputs: 3 -> 2 -> 1 -> 0 ->
+
+    print("Printing list using __str__:")
+    print(sll)
+
+    print("List as Python list:", sll.to_list())
+
+    print("Clearing the list.")
+    sll.clear()
+    sll.print_list()
