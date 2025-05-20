@@ -51,21 +51,23 @@ class SingleLinkedList:
     # Delete a node by value
     def delete(self, key):
         temp = self.head
-
-        if temp and temp.data == key:
-            self.head = temp.next
-            return
-
         prev = None
-        while temp and temp.data != key:
+    
+        while temp:
+            if temp.data == key:
+                if prev is None:
+                    # Deleting the head node
+                    self.head = temp.next
+                else:
+                    # Deleting a middle or end node
+                    prev.next = temp.next
+                print(f"Deleted {key}")
+                return
             prev = temp
             temp = temp.next
+    
+        print("Value not found.")
 
-        if not temp:
-            print("Value not found.")
-            return
-
-        prev.next = temp.next
 
     # Search for a value (iterative)
     def search(self, key):
