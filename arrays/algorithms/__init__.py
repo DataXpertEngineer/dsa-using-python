@@ -1,5 +1,5 @@
 """
-Algorithms module for classic array algorithms.
+Classic array algorithms module.
 
 This module contains implementations of:
 - Searching algorithms (linear search, binary search)

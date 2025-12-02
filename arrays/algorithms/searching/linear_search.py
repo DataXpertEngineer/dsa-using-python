@@ -72,7 +72,7 @@ def linear_search_all_occurrences(arr: List[int], target: int) -> List[int]:
         Space: O(k)   - Where k is the number of occurrences (result list).
     """
     indices = []
-    for i, num in enumerate[int](arr):
+    for i, num in enumerate(arr):
         if num == target:
             indices.append(i)
     return indices
