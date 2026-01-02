@@ -198,6 +198,77 @@ A comprehensive collection of **Data Structures** and **Algorithms** implemented
 4. **Tries** → String-based data structures
 5. **Graph Algorithms** → Dijkstra's, MST, Union-Find
 
+## 📅 100-Day Preparation Plan
+
+This repository includes a comprehensive **100-Day DSA Preparation Plan** designed to help you master Data Structures and Algorithms systematically.
+
+### 📋 Preparation Plan Resources
+
+1. **100-Day Preparation Plan (Markdown)**
+   - **File**: [`100_DAY_PREPARATION_PLAN.md`](100_DAY_PREPARATION_PLAN.md)
+   - **Description**: Detailed day-by-day learning schedule with:
+     - Daily learning objectives
+     - Repository practice tasks
+     - LeetCode problem assignments
+     - Revision schedules
+     - Progress tracking checklists
+   - **Features**:
+     - No time restrictions - focus on understanding and practice
+     - 250-300 LeetCode problems across 100 days
+     - Comprehensive coverage of all 16 modules
+     - Weekly and monthly revision schedules
+     - Mock interview practice days
+
+2. **Excel Tracker Workbook**
+   - **File**: [`100_DAY_PREPARATION_PLAN.xlsx`](100_DAY_PREPARATION_PLAN.xlsx)
+   - **Description**: Interactive Excel workbook with 5 comprehensive sheets:
+     - **Daily Schedule**: Complete 100-day plan with topics, learning focus, practice tasks, and LeetCode problems
+     - **Topic Distribution**: Statistics showing days allocated, problem counts, and difficulty breakdown per topic
+     - **LeetCode Problems**: Complete list of all 253+ problems sorted by number with difficulty, pattern, and topic
+     - **Progress Tracking**: Weekly progress tracker with topics covered and problems solved
+     - **Revision Calendar**: All revision days highlighted with topics and focus areas
+   - **Features**:
+     - Color-coded by topic type (Learning, Revision, Interview Practice)
+     - Difficulty-based color coding (Easy/Medium/Hard)
+     - Status tracking columns for progress monitoring
+     - Ready-to-use templates for tracking your journey
+
+### 🎯 How to Use the Preparation Plan
+
+1. **Start with the Markdown Plan**:
+   - Read through the 100-day schedule
+   - Understand the daily structure
+   - Note the learning objectives for each day
+
+2. **Use the Excel Tracker**:
+   - Open `100_DAY_PREPARATION_PLAN.xlsx`
+   - Track your progress in the "LeetCode Problems" sheet
+   - Update weekly progress in the "Progress Tracking" sheet
+   - Plan revisions using the "Revision Calendar" sheet
+
+3. **Follow the Daily Routine**:
+   - **Learning Session**: Read repository files and understand concepts
+   - **Practice Session**: Implement and solve repository problems
+   - **LeetCode Session**: Solve assigned LeetCode problems
+   - **Review Session**: Review previous concepts and patterns
+
+### 📊 Plan Statistics
+
+- **Total Days**: 100
+- **Total LeetCode Problems**: 253+ (target: 250-300)
+- **Topics Covered**: 20 major topics
+- **Revision Days**: 15+ days
+- **Mock Interview Days**: 5+ days
+
+### 🎓 Plan Highlights
+
+- ✅ **Comfortable Pace**: No daily time restrictions - focus on understanding
+- ✅ **Comprehensive Coverage**: All 16 modules systematically covered
+- ✅ **Regular Revisions**: Weekly and monthly consolidation
+- ✅ **Interview Preparation**: Mock interviews in final weeks
+- ✅ **Progress Tracking**: Multiple tracking mechanisms
+- ✅ **Pattern Recognition**: Problems organized by patterns
+
 ## 🎯 Key Features of Each Module
 
 - **Core Concepts**: Fundamental operations and definitions
