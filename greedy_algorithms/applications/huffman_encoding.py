@@ -41,7 +41,7 @@ class HuffmanNode:
         self.left = left
         self.right = right
     
-    def __lt__(self, other: 'HuffmanNode') -> bool:
+    def __lt__(self, other: 'HuffmanNode'):
         """Comparison for priority queue."""
         return self.freq < other.freq
 

@@ -37,7 +37,7 @@ class UnionFind:
     - connected(x, y): Check if x and y in same set
     """
     
-    def __init__(self, elements: List[int]) -> None:
+    def __init__(self, elements: List[int]):
         """
         Initialize union-find with elements.
 
@@ -52,7 +52,7 @@ class UnionFind:
         self.rank: Dict[int, int] = {x: 0 for x in elements}
         self.count = len(elements)
     
-    def find(self, x: int) -> int:
+    def find(self, x: int):
         """
         Find root of x's set with path compression.
 
@@ -71,7 +71,7 @@ class UnionFind:
             self.parent[x] = self.find(self.parent[x])
         return self.parent[x]
     
-    def union(self, x: int, y: int) -> bool:
+    def union(self, x: int, y: int):
         """
         Union sets containing x and y.
 
@@ -104,7 +104,7 @@ class UnionFind:
         self.count -= 1
         return True
     
-    def connected(self, x: int, y: int) -> bool:
+    def connected(self, x: int, y: int):
         """
         Check if x and y are in same set.
 
@@ -121,7 +121,7 @@ class UnionFind:
         """
         return self.find(x) == self.find(y)
     
-    def get_count(self) -> int:
+    def get_count(self):
         """
         Get number of disjoint sets.
 
@@ -143,18 +143,18 @@ class UnionFindSimple:
     Simplified union-find without rank optimization.
     """
     
-    def __init__(self, elements: List[int]) -> None:
+    def __init__(self, elements: List[int]):
         """Initialize union-find."""
         self.parent: Dict[int, int] = {x: x for x in elements}
         self.count = len(elements)
     
-    def find(self, x: int) -> int:
+    def find(self, x: int):
         """Find root with path compression."""
         if self.parent[x] != x:
             self.parent[x] = self.find(self.parent[x])
         return self.parent[x]
     
-    def union(self, x: int, y: int) -> bool:
+    def union(self, x: int, y: int):
         """Union sets (always attach x to y)."""
         root_x = self.find(x)
         root_y = self.find(y)
@@ -166,7 +166,7 @@ class UnionFindSimple:
         self.count -= 1
         return True
     
-    def connected(self, x: int, y: int) -> bool:
+    def connected(self, x: int, y: int):
         """Check if connected."""
         return self.find(x) == self.find(y)
 

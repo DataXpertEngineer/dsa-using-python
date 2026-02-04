@@ -32,7 +32,7 @@ class Node:
         data: The data stored in the node
         next: Reference to the next node in the list
     """
-    def __init__(self, data: Any) -> None:
+    def __init__(self, data):
         """
         Initialize a node with data.
 
@@ -51,7 +51,7 @@ class SingleLinkedList:
     Supports insertion, deletion, search, and traversal operations.
     """
     
-    def __init__(self) -> None:
+    def __init__(self):
         """
         Initialize an empty linked list.
         """
@@ -70,7 +70,7 @@ class SingleLinkedList:
         """
         return LinkedListIterator(self.head)
     
-    def __str__(self) -> str:
+    def __str__(self):
         """
         String representation of the linked list.
 
@@ -88,7 +88,7 @@ class SingleLinkedList:
             temp = temp.next
         return " -> ".join(nodes) + " -> None"
 
-    def insert_at_start(self, data: Any) -> None:
+    def insert_at_start(self, data):
         """
         Insert a node at the beginning of the list.
 
@@ -103,7 +103,7 @@ class SingleLinkedList:
         new_node.next = self.head
         self.head = new_node
 
-    def insert_at_end(self, data: Any) -> None:
+    def insert_at_end(self, data):
         """
         Insert a node at the end of the list.
 
@@ -123,7 +123,7 @@ class SingleLinkedList:
             temp = temp.next
         temp.next = new_node
 
-    def insert_after_node(self, prev_node_data: Any, data: Any) -> None:
+    def insert_after_node(self, prev_node_data, data):
         """
         Insert a node after a node with specific data.
 
@@ -145,7 +145,7 @@ class SingleLinkedList:
         new_node.next = temp.next
         temp.next = new_node
 
-    def delete(self, key: Any) -> bool:
+    def delete(self, key):
         """
         Delete a node with the given key.
 
@@ -176,7 +176,7 @@ class SingleLinkedList:
     
         return False
 
-    def search(self, key: Any) -> bool:
+    def search(self, key):
         """
         Search for a value in the linked list.
 
@@ -197,7 +197,7 @@ class SingleLinkedList:
             temp = temp.next
         return False
 
-    def reverse(self) -> None:
+    def reverse(self):
         """
         Reverse the linked list in-place (iterative method).
 
@@ -214,7 +214,7 @@ class SingleLinkedList:
             current = next_node  # move current forward
         self.head = prev
 
-    def print_list(self) -> None:
+    def print_list(self):
         """
         Print all elements of the linked list.
 
@@ -228,7 +228,7 @@ class SingleLinkedList:
             temp = temp.next
         print("None")
 
-    def length(self) -> int:
+    def length(self):
         """
         Get the length of the linked list.
 
@@ -246,7 +246,7 @@ class SingleLinkedList:
             temp = temp.next
         return count
 
-    def insert_at_position(self, position: int, data: Any) -> None:
+    def insert_at_position(self, position: int, data):
         """
         Insert a node at a given position (0-indexed).
 
@@ -271,7 +271,7 @@ class SingleLinkedList:
         new_node.next = temp.next
         temp.next = new_node
 
-    def has_cycle(self) -> bool:
+    def has_cycle(self):
         """
         Detect if the linked list has a cycle using Floyd's algorithm.
 
@@ -325,7 +325,7 @@ class SingleLinkedList:
             temp = temp.next
         return result
     
-    def clear(self) -> None:
+    def clear(self):
         """
         Clear the linked list (remove all nodes).
 
@@ -340,7 +340,7 @@ class LinkedListIterator:
     """
     Iterator for linked list to enable iteration with 'for' loops.
     """
-    def __init__(self, start_node: Optional[Node]) -> None:
+    def __init__(self, start_node: Optional[Node]):
         """
         Initialize iterator with starting node.
 

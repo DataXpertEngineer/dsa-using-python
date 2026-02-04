@@ -27,7 +27,7 @@ class StandardQueue:
     Standard FIFO queue implementation using Python list.
     """
     
-    def __init__(self) -> None:
+    def __init__(self):
         """
         Initialize an empty queue.
 
@@ -35,9 +35,9 @@ class StandardQueue:
             Time: O(1)     - Constant time initialization.
             Space: O(1)   - Creates empty list.
         """
-        self.items: List[Any] = []
+        self.items = []
     
-    def enqueue(self, item: Any) -> None:
+    def enqueue(self, item):
         """
         Add element to rear of queue.
 
@@ -80,7 +80,7 @@ class StandardQueue:
             return None
         return self.items[0]
     
-    def is_empty(self) -> bool:
+    def is_empty(self):
         """
         Check if queue is empty.
 
@@ -93,7 +93,7 @@ class StandardQueue:
         """
         return len(self.items) == 0
     
-    def size(self) -> int:
+    def size(self):
         """
         Get number of elements in queue.
 
@@ -106,7 +106,7 @@ class StandardQueue:
         """
         return len(self.items)
     
-    def __str__(self) -> str:
+    def __str__(self):
         """
         String representation of queue.
 

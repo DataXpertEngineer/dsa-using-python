@@ -86,19 +86,19 @@ def insert_words(trie: Trie, words: List[str]) -> None:
 class TrieNodeWithCount(TrieNode):
     """Trie node with frequency count."""
     
-    def __init__(self) -> None:
+    def __init__(self):
         super().__init__()
-        self.count: int = 0
+        self.count = 0
 
 
 class TrieWithCount:
     """Trie that tracks word frequency."""
     
-    def __init__(self) -> None:
+    def __init__(self):
         self.root = TrieNodeWithCount()
         self.word_count = 0
     
-    def insert(self, word: str) -> None:
+    def insert(self, word: str):
         """
         Insert word and increment count.
 
@@ -125,7 +125,7 @@ class TrieWithCount:
         current.is_end_of_word = True
         current.count += 1
     
-    def get_frequency(self, word: str) -> int:
+    def get_frequency(self, word: str):
         """
         Get frequency of word.
 

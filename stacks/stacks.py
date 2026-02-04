@@ -33,7 +33,7 @@ class Stack:
     are added and removed from the same end (top).
     """
     
-    def __init__(self) -> None:
+    def __init__(self):
         """
         Initialize an empty stack.
 
@@ -41,9 +41,9 @@ class Stack:
             Time: O(1)     - Constant time initialization.
             Space: O(1)   - Creates empty list.
         """
-        self.items: List[Any] = []
+        self.items = []
     
-    def push(self, item: Any) -> None:
+    def push(self, item):
         """
         Add an element to the top of the stack.
 
@@ -86,7 +86,7 @@ class Stack:
             return None
         return self.items[-1]
     
-    def is_empty(self) -> bool:
+    def is_empty(self):
         """
         Check if the stack is empty.
 
@@ -99,7 +99,7 @@ class Stack:
         """
         return len(self.items) == 0
     
-    def size(self) -> int:
+    def size(self):
         """
         Get the number of elements in the stack.
 
@@ -112,7 +112,7 @@ class Stack:
         """
         return len(self.items)
     
-    def __str__(self) -> str:
+    def __str__(self):
         """
         String representation of the stack.
 
@@ -125,7 +125,7 @@ class Stack:
         """
         return f"Stack({self.items[::-1]})"  # Show from top to bottom
     
-    def __repr__(self) -> str:
+    def __repr__(self):
         """
         Official string representation of the stack.
 
@@ -134,7 +134,7 @@ class Stack:
         """
         return self.__str__()
     
-    def clear(self) -> None:
+    def clear(self):
         """
         Remove all elements from the stack.
 

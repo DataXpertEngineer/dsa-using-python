@@ -26,7 +26,7 @@ class CircularQueue:
     Circular queue implementation with fixed capacity.
     """
     
-    def __init__(self, capacity: int) -> None:
+    def __init__(self, capacity: int):
         """
         Initialize circular queue with given capacity.
 
@@ -40,12 +40,12 @@ class CircularQueue:
         if capacity <= 0:
             raise ValueError("Capacity must be positive")
         self.capacity = capacity
-        self.items: list[Optional[Any]] = [None] * capacity
+        self.items = [None] * capacity
         self.front = 0
         self.rear = -1
         self.size = 0
     
-    def enqueue(self, item: Any) -> bool:
+    def enqueue(self, item):
         """
         Add element to rear of queue.
 
@@ -102,7 +102,7 @@ class CircularQueue:
             return None
         return self.items[self.front]
     
-    def is_empty(self) -> bool:
+    def is_empty(self):
         """
         Check if queue is empty.
 
@@ -115,7 +115,7 @@ class CircularQueue:
         """
         return self.size == 0
     
-    def is_full(self) -> bool:
+    def is_full(self):
         """
         Check if queue is full.
 
@@ -128,7 +128,7 @@ class CircularQueue:
         """
         return self.size == self.capacity
     
-    def get_size(self) -> int:
+    def get_size(self):
         """
         Get number of elements in queue.
 
@@ -141,7 +141,7 @@ class CircularQueue:
         """
         return self.size
     
-    def __str__(self) -> str:
+    def __str__(self):
         """
         String representation of queue.
 

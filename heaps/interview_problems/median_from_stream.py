@@ -48,7 +48,7 @@ class MedianFinder:
         # Min heap for larger half
         self.large: list[int] = []
     
-    def add_num(self, num: int) -> None:
+    def add_num(self, num: int):
         """
         Add number to data structure.
 

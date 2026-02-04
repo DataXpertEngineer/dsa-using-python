@@ -43,7 +43,7 @@ class WeightedGraph:
     Weighted graph using adjacency list.
     """
     
-    def __init__(self, directed: bool = False) -> None:
+    def __init__(self, directed: bool = False):
         """
         Initialize weighted graph.
 
@@ -58,7 +58,7 @@ class WeightedGraph:
         self.directed = directed
         self.vertices: Set[int] = set()
     
-    def add_edge(self, u: int, v: int, weight: int) -> None:
+    def add_edge(self, u: int, v: int, weight: int):
         """
         Add weighted edge between u and v.
 
@@ -114,7 +114,7 @@ class WeightedGraph:
                 return weight
         return None
     
-    def display(self) -> None:
+    def display(self):
         """Display weighted graph."""
         print("Weighted Graph:")
         for vertex in sorted(self.vertices):

@@ -29,7 +29,7 @@ class StackNode:
     """
     Node class for linked list stack.
     """
-    def __init__(self, data: Any) -> None:
+    def __init__(self, data):
         """
         Initialize a stack node.
 
@@ -45,7 +45,7 @@ class LinkedListStack:
     Stack implementation using linked list.
     """
     
-    def __init__(self) -> None:
+    def __init__(self):
         """
         Initialize an empty stack.
 
@@ -56,7 +56,7 @@ class LinkedListStack:
         self.top: Optional[StackNode] = None
         self._size = 0
     
-    def push(self, item: Any) -> None:
+    def push(self, item):
         """
         Add element to top of stack.
 
@@ -106,7 +106,7 @@ class LinkedListStack:
             return None
         return self.top.data
     
-    def is_empty(self) -> bool:
+    def is_empty(self):
         """
         Check if stack is empty.
 
@@ -119,7 +119,7 @@ class LinkedListStack:
         """
         return self.top is None
     
-    def size(self) -> int:
+    def size(self):
         """
         Get number of elements in stack.
 
@@ -132,7 +132,7 @@ class LinkedListStack:
         """
         return self._size
     
-    def __str__(self) -> str:
+    def __str__(self):
         """
         String representation of stack.
 

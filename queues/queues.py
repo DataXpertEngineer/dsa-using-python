@@ -33,7 +33,7 @@ class Queue:
     are added at the rear and removed from the front.
     """
     
-    def __init__(self) -> None:
+    def __init__(self):
         """
         Initialize an empty queue.
 
@@ -41,9 +41,9 @@ class Queue:
             Time: O(1)     - Constant time initialization.
             Space: O(1)   - Creates empty list.
         """
-        self.items: List[Any] = []
+        self.items = []
     
-    def enqueue(self, item: Any) -> None:
+    def enqueue(self, item):
         """
         Add an element to the rear of the queue.
 
@@ -86,7 +86,7 @@ class Queue:
             return None
         return self.items[0]
     
-    def is_empty(self) -> bool:
+    def is_empty(self):
         """
         Check if the queue is empty.
 
@@ -99,7 +99,7 @@ class Queue:
         """
         return len(self.items) == 0
     
-    def size(self) -> int:
+    def size(self):
         """
         Get the number of elements in the queue.
 
@@ -112,7 +112,7 @@ class Queue:
         """
         return len(self.items)
     
-    def __str__(self) -> str:
+    def __str__(self):
         """
         String representation of the queue.
 
@@ -125,7 +125,7 @@ class Queue:
         """
         return f"Queue({self.items})"
     
-    def __repr__(self) -> str:
+    def __repr__(self):
         """
         Official string representation of the queue.
 
@@ -134,7 +134,7 @@ class Queue:
         """
         return self.__str__()
     
-    def clear(self) -> None:
+    def clear(self):
         """
         Remove all elements from the queue.
 

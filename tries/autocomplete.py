@@ -39,7 +39,7 @@ class AutocompleteSystem:
     Autocomplete system using trie.
     """
     
-    def __init__(self, words: List[str]) -> None:
+    def __init__(self, words: List[str]):
         """
         Initialize autocomplete with dictionary.
 
@@ -84,9 +84,9 @@ class AutocompleteSystem:
 class TrieNodeWithFreq(TrieNode):
     """Trie node with frequency for ranking."""
     
-    def __init__(self) -> None:
+    def __init__(self):
         super().__init__()
-        self.frequency: int = 0
+        self.frequency = 0
 
 
 class AutocompleteWithRanking:
@@ -94,7 +94,7 @@ class AutocompleteWithRanking:
     Autocomplete system with frequency-based ranking.
     """
     
-    def __init__(self, words: List[Tuple[str, int]] = None) -> None:
+    def __init__(self, words: List[Tuple[str, int]] = None):
         """
         Initialize with words and their frequencies.
 
@@ -106,7 +106,7 @@ class AutocompleteWithRanking:
             for word, freq in words:
                 self._insert(word, freq)
     
-    def _insert(self, word: str, frequency: int) -> None:
+    def _insert(self, word: str, frequency: int):
         """Insert word with frequency."""
         current = self.root
         
@@ -143,7 +143,7 @@ class AutocompleteWithRanking:
         # Collect all words with frequencies
         candidates: List[Tuple[int, str]] = []
         
-        def dfs(node: TrieNodeWithFreq, suffix: str) -> None:
+        def dfs(node: TrieNodeWithFreq, suffix: str):
             if node.is_end_of_word:
                 candidates.append((node.frequency, prefix + suffix))
             
@@ -167,7 +167,7 @@ class AutocompleteWithHotKeys:
     Autocomplete that learns from user input (hot keys).
     """
     
-    def __init__(self, words: List[str]) -> None:
+    def __init__(self, words: List[str]):
         """Initialize with dictionary."""
         self.trie = Trie()
         import sys
@@ -175,9 +175,9 @@ class AutocompleteWithHotKeys:
         sys.path.append(str(Path(__file__).parent))
         from insert import insert_words
         insert_words(self.trie, words)
-        self.hot_keys: dict = {}  # Track user selections
+        self.hot_keys = {}  # Track user selections
     
-    def select(self, word: str) -> None:
+    def select(self, word: str):
         """
         Record user selection (hot key).
 

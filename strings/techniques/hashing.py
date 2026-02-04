@@ -44,7 +44,7 @@ class RollingHash:
         self.mod = mod
         self.power = 1
     
-    def compute_hash(self, s: str) -> int:
+    def compute_hash(self, s: str):
         """
         Compute hash of string.
 
@@ -63,7 +63,7 @@ class RollingHash:
             hash_value = (hash_value * self.base + ord(char)) % self.mod
         return hash_value
     
-    def roll_hash(self, old_hash: int, old_char: str, new_char: str, pattern_len: int) -> int:
+    def roll_hash(self, old_hash: int, old_char: str, new_char: str, pattern_len: int):
         """
         Roll hash from old window to new window.
 

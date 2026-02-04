@@ -30,7 +30,7 @@ class MaxHeap:
     Max heap implementation from scratch.
     """
     
-    def __init__(self) -> None:
+    def __init__(self):
         """
         Initialize an empty max heap.
 
@@ -38,25 +38,25 @@ class MaxHeap:
             Time: O(1)     - Constant time initialization.
             Space: O(1)   - Creates empty list.
         """
-        self.heap: List[Any] = []
+        self.heap = []
     
-    def _parent(self, index: int) -> int:
+    def _parent(self, index: int):
         """Get parent index."""
         return (index - 1) // 2
     
-    def _left_child(self, index: int) -> int:
+    def _left_child(self, index: int):
         """Get left child index."""
         return 2 * index + 1
     
-    def _right_child(self, index: int) -> int:
+    def _right_child(self, index: int):
         """Get right child index."""
         return 2 * index + 2
     
-    def _swap(self, i: int, j: int) -> None:
+    def _swap(self, i: int, j: int):
         """Swap elements at indices i and j."""
         self.heap[i], self.heap[j] = self.heap[j], self.heap[i]
     
-    def _heapify_up(self, index: int) -> None:
+    def _heapify_up(self, index: int):
         """
         Move element up to maintain heap property.
 
@@ -71,7 +71,7 @@ class MaxHeap:
             self._swap(parent, index)
             index = parent
     
-    def _heapify_down(self, index: int) -> None:
+    def _heapify_down(self, index: int):
         """
         Move element down to maintain heap property.
 
@@ -96,7 +96,7 @@ class MaxHeap:
             self._swap(index, largest)
             index = largest
     
-    def insert(self, item: Any) -> None:
+    def insert(self, item):
         """
         Insert element into max heap.
 
@@ -148,7 +148,7 @@ class MaxHeap:
             return None
         return self.heap[0]
     
-    def is_empty(self) -> bool:
+    def is_empty(self):
         """
         Check if heap is empty.
 
@@ -161,7 +161,7 @@ class MaxHeap:
         """
         return len(self.heap) == 0
     
-    def size(self) -> int:
+    def size(self):
         """
         Get number of elements in heap.
 
@@ -174,7 +174,7 @@ class MaxHeap:
         """
         return len(self.heap)
     
-    def build_heap(self, arr: List[Any]) -> None:
+    def build_heap(self, arr: List[Any]):
         """
         Build max heap from array in-place.
 
@@ -190,7 +190,7 @@ class MaxHeap:
         for i in range(len(self.heap) // 2 - 1, -1, -1):
             self._heapify_down(i)
     
-    def __str__(self) -> str:
+    def __str__(self):
         """
         String representation of heap.
 

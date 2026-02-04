@@ -39,8 +39,8 @@ class TreeNode:
     - right: Reference to right child
     """
     
-    def __init__(self, val: Any = 0, left: Optional['TreeNode'] = None, 
-                 right: Optional['TreeNode'] = None) -> None:
+    def __init__(self, val=0, left: Optional['TreeNode'] = None, 
+                 right: Optional['TreeNode'] = None):
         """
         Initialize a tree node.
 
@@ -57,11 +57,11 @@ class TreeNode:
         self.left = left
         self.right = right
     
-    def __str__(self) -> str:
+    def __str__(self):
         """String representation of node."""
         return str(self.val)
     
-    def __repr__(self) -> str:
+    def __repr__(self):
         """Official string representation."""
         return f"TreeNode({self.val})"
 
@@ -71,7 +71,7 @@ class Tree:
     Binary tree implementation.
     """
     
-    def __init__(self, root: Optional[TreeNode] = None) -> None:
+    def __init__(self, root: Optional[TreeNode] = None):
         """
         Initialize tree with root node.
 
@@ -84,7 +84,7 @@ class Tree:
         """
         self.root = root
     
-    def is_empty(self) -> bool:
+    def is_empty(self):
         """
         Check if tree is empty.
 
@@ -97,7 +97,7 @@ class Tree:
         """
         return self.root is None
     
-    def size(self) -> int:
+    def size(self):
         """
         Get number of nodes in tree.
 

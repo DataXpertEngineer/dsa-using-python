@@ -29,7 +29,7 @@ class ArrayStack:
     Stack implementation using Python list (dynamic array).
     """
     
-    def __init__(self, capacity: Optional[int] = None) -> None:
+    def __init__(self, capacity: Optional[int] = None):
         """
         Initialize stack with optional capacity.
 
@@ -40,10 +40,10 @@ class ArrayStack:
             Time: O(1)     - Constant time initialization.
             Space: O(1)   - Creates empty list.
         """
-        self.items: List[Any] = []
+        self.items = []
         self.capacity = capacity
     
-    def push(self, item: Any) -> bool:
+    def push(self, item):
         """
         Add element to top of stack.
 
@@ -92,7 +92,7 @@ class ArrayStack:
             return None
         return self.items[-1]
     
-    def is_empty(self) -> bool:
+    def is_empty(self):
         """
         Check if stack is empty.
 
@@ -105,7 +105,7 @@ class ArrayStack:
         """
         return len(self.items) == 0
     
-    def is_full(self) -> bool:
+    def is_full(self):
         """
         Check if stack is full (only if capacity is set).
 
@@ -120,7 +120,7 @@ class ArrayStack:
             return False
         return len(self.items) >= self.capacity
     
-    def size(self) -> int:
+    def size(self):
         """
         Get number of elements in stack.
 
@@ -133,7 +133,7 @@ class ArrayStack:
         """
         return len(self.items)
     
-    def __str__(self) -> str:
+    def __str__(self):
         """
         String representation of stack.
 

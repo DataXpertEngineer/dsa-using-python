@@ -33,7 +33,7 @@ class Graph:
     Efficient for sparse graphs.
     """
     
-    def __init__(self, directed: bool = False) -> None:
+    def __init__(self, directed: bool = False):
         """
         Initialize graph.
 
@@ -48,7 +48,7 @@ class Graph:
         self.directed = directed
         self.vertices: Set[int] = set()
     
-    def add_edge(self, u: int, v: int) -> None:
+    def add_edge(self, u: int, v: int):
         """
         Add edge between vertices u and v.
 
@@ -67,7 +67,7 @@ class Graph:
         if not self.directed:
             self.graph[v].append(u)
     
-    def remove_edge(self, u: int, v: int) -> None:
+    def remove_edge(self, u: int, v: int):
         """
         Remove edge between vertices u and v.
 
@@ -101,7 +101,7 @@ class Graph:
         """
         return self.graph[vertex]
     
-    def has_edge(self, u: int, v: int) -> bool:
+    def has_edge(self, u: int, v: int):
         """
         Check if edge exists between u and v.
 
@@ -157,7 +157,7 @@ class Graph:
         
         return edges
     
-    def display(self) -> None:
+    def display(self):
         """Display graph structure."""
         print("Graph (Adjacency List):")
         for vertex in sorted(self.vertices):
@@ -176,7 +176,7 @@ class GraphMatrix:
     Efficient for dense graphs, fast edge lookup.
     """
     
-    def __init__(self, num_vertices: int, directed: bool = False) -> None:
+    def __init__(self, num_vertices: int, directed: bool = False):
         """
         Initialize graph with adjacency matrix.
 
@@ -192,7 +192,7 @@ class GraphMatrix:
         self.matrix: List[List[int]] = [[0] * num_vertices for _ in range(num_vertices)]
         self.directed = directed
     
-    def add_edge(self, u: int, v: int) -> None:
+    def add_edge(self, u: int, v: int):
         """
         Add edge between vertices u and v.
 
@@ -208,7 +208,7 @@ class GraphMatrix:
         if not self.directed:
             self.matrix[v][u] = 1
     
-    def remove_edge(self, u: int, v: int) -> None:
+    def remove_edge(self, u: int, v: int):
         """
         Remove edge between vertices u and v.
 
@@ -224,7 +224,7 @@ class GraphMatrix:
         if not self.directed:
             self.matrix[v][u] = 0
     
-    def has_edge(self, u: int, v: int) -> bool:
+    def has_edge(self, u: int, v: int):
         """
         Check if edge exists.
 
@@ -261,7 +261,7 @@ class GraphMatrix:
                 neighbors.append(v)
         return neighbors
     
-    def display(self) -> None:
+    def display(self):
         """Display adjacency matrix."""
         print("Graph (Adjacency Matrix):")
         print("   ", end="")

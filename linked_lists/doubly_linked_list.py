@@ -33,7 +33,7 @@ class DoublyNode:
         prev: Reference to the previous node
         next: Reference to the next node
     """
-    def __init__(self, data: Any) -> None:
+    def __init__(self, data):
         """
         Initialize a node with data.
 
@@ -53,14 +53,14 @@ class DoublyLinkedList:
     Supports bidirectional traversal and efficient operations at both ends.
     """
     
-    def __init__(self) -> None:
+    def __init__(self):
         """
         Initialize an empty doubly linked list.
         """
         self.head: Optional[DoublyNode] = None
         self.tail: Optional[DoublyNode] = None
 
-    def __str__(self) -> str:
+    def __str__(self):
         """
         String representation of the doubly linked list.
 
@@ -78,7 +78,7 @@ class DoublyLinkedList:
             temp = temp.next
         return " <-> ".join(nodes) if nodes else "Empty"
 
-    def insert_at_start(self, data: Any) -> None:
+    def insert_at_start(self, data):
         """
         Insert a node at the beginning of the list.
 
@@ -97,7 +97,7 @@ class DoublyLinkedList:
         self.head.prev = new_node
         self.head = new_node
 
-    def insert_at_end(self, data: Any) -> None:
+    def insert_at_end(self, data):
         """
         Insert a node at the end of the list.
 
@@ -116,7 +116,7 @@ class DoublyLinkedList:
         self.tail.next = new_node
         self.tail = new_node
 
-    def delete(self, key: Any) -> bool:
+    def delete(self, key):
         """
         Delete a node with the given key.
 
@@ -151,7 +151,7 @@ class DoublyLinkedList:
         
         return False
 
-    def delete_node(self, node: DoublyNode) -> None:
+    def delete_node(self, node: DoublyNode):
         """
         Delete a node given a reference to it (O(1) operation).
 
@@ -172,7 +172,7 @@ class DoublyLinkedList:
         else:
             self.tail = node.prev
 
-    def search(self, key: Any) -> bool:
+    def search(self, key):
         """
         Search for a value in the linked list.
 
@@ -193,7 +193,7 @@ class DoublyLinkedList:
             temp = temp.next
         return False
 
-    def reverse(self) -> None:
+    def reverse(self):
         """
         Reverse the doubly linked list in-place.
 
@@ -213,7 +213,7 @@ class DoublyLinkedList:
         if temp:
             self.head = temp.prev
 
-    def print_forward(self) -> None:
+    def print_forward(self):
         """
         Print all elements from head to tail.
 
@@ -227,7 +227,7 @@ class DoublyLinkedList:
             temp = temp.next
         print("None")
 
-    def print_backward(self) -> None:
+    def print_backward(self):
         """
         Print all elements from tail to head.
 
@@ -241,7 +241,7 @@ class DoublyLinkedList:
             temp = temp.prev
         print("None")
 
-    def length(self) -> int:
+    def length(self):
         """
         Get the length of the linked list.
 
@@ -259,7 +259,7 @@ class DoublyLinkedList:
             temp = temp.next
         return count
 
-    def clear(self) -> None:
+    def clear(self):
         """
         Clear the linked list (remove all nodes).
 

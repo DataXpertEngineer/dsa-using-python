@@ -32,7 +32,7 @@ class CircularNode:
         data: The data stored in the node
         next: Reference to the next node in the circle
     """
-    def __init__(self, data: Any) -> None:
+    def __init__(self, data):
         """
         Initialize a node with data.
 
@@ -51,13 +51,13 @@ class CircularLinkedList:
     Supports circular traversal and operations.
     """
     
-    def __init__(self) -> None:
+    def __init__(self):
         """
         Initialize an empty circular linked list.
         """
         self.head: Optional[CircularNode] = None
 
-    def __str__(self) -> str:
+    def __str__(self):
         """
         String representation of the circular linked list.
 
@@ -82,7 +82,7 @@ class CircularLinkedList:
         
         return " -> ".join(nodes) + " -> (back to head)"
 
-    def insert_at_start(self, data: Any) -> None:
+    def insert_at_start(self, data):
         """
         Insert a node at the beginning of the circular list.
 
@@ -109,7 +109,7 @@ class CircularLinkedList:
         last.next = new_node
         self.head = new_node
 
-    def insert_at_end(self, data: Any) -> None:
+    def insert_at_end(self, data):
         """
         Insert a node at the end of the circular list.
 
@@ -135,7 +135,7 @@ class CircularLinkedList:
         last.next = new_node
         new_node.next = self.head
 
-    def delete(self, key: Any) -> bool:
+    def delete(self, key):
         """
         Delete a node with the given key.
 
@@ -179,7 +179,7 @@ class CircularLinkedList:
         
         return False
 
-    def search(self, key: Any) -> bool:
+    def search(self, key):
         """
         Search for a value in the circular linked list.
 
@@ -208,7 +208,7 @@ class CircularLinkedList:
         
         return False
 
-    def print_list(self) -> None:
+    def print_list(self):
         """
         Print all elements of the circular linked list.
 
@@ -229,7 +229,7 @@ class CircularLinkedList:
             temp = temp.next
         print("(back to head)")
 
-    def length(self) -> int:
+    def length(self):
         """
         Get the length of the circular linked list.
 
@@ -250,7 +250,7 @@ class CircularLinkedList:
             temp = temp.next
         return count
 
-    def clear(self) -> None:
+    def clear(self):
         """
         Clear the circular linked list (remove all nodes).
 

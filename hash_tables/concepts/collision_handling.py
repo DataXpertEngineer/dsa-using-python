@@ -34,7 +34,7 @@ class ChainingHashTable:
     Each bucket contains a list of (key, value) pairs.
     """
     
-    def __init__(self, capacity: int = 16) -> None:
+    def __init__(self, capacity: int = 16):
         """
         Initialize hash table with chaining.
 
@@ -46,14 +46,14 @@ class ChainingHashTable:
             Space: O(n)   - Stores n empty lists.
         """
         self.capacity = capacity
-        self.table: List[List[Tuple[Any, Any]]] = [[] for _ in range(capacity)]
+        self.table = [[] for _ in range(capacity)]
         self.size = 0
     
-    def _hash(self, key: Any) -> int:
+    def _hash(self, key):
         """Hash function."""
         return hash(key) % self.capacity
     
-    def insert(self, key: Any, value: Any) -> None:
+    def insert(self, key, value):
         """
         Insert key-value pair using chaining.
 
@@ -78,7 +78,7 @@ class ChainingHashTable:
         bucket.append((key, value))
         self.size += 1
     
-    def get(self, key: Any) -> Optional[Any]:
+    def get(self, key) -> Optional[Any]:
         """
         Get value for key using chaining.
 
@@ -101,7 +101,7 @@ class ChainingHashTable:
         
         return None
     
-    def delete(self, key: Any) -> bool:
+    def delete(self, key):
         """
         Delete key-value pair using chaining.
 
@@ -136,7 +136,7 @@ class LinearProbingHashTable:
     When collision occurs, check next slot sequentially.
     """
     
-    def __init__(self, capacity: int = 16) -> None:
+    def __init__(self, capacity: int = 16):
         """
         Initialize hash table with linear probing.
 
@@ -148,14 +148,14 @@ class LinearProbingHashTable:
             Space: O(n)   - Stores array.
         """
         self.capacity = capacity
-        self.table: List[Optional[Tuple[Any, Any]]] = [None] * capacity
+        self.table = [None] * capacity
         self.size = 0
     
-    def _hash(self, key: Any) -> int:
+    def _hash(self, key):
         """Hash function."""
         return hash(key) % self.capacity
     
-    def _find_slot(self, key: Any) -> Optional[int]:
+    def _find_slot(self, key) -> Optional[int]:
         """Find slot for key using linear probing."""
         index = self._hash(key)
         start = index
@@ -168,7 +168,7 @@ class LinearProbingHashTable:
                 return None
         return index
     
-    def insert(self, key: Any, value: Any) -> bool:
+    def insert(self, key, value):
         """
         Insert key-value pair using linear probing.
 
@@ -193,7 +193,7 @@ class LinearProbingHashTable:
         self.table[index] = (key, value)
         return True
     
-    def get(self, key: Any) -> Optional[Any]:
+    def get(self, key) -> Optional[Any]:
         """
         Get value for key using linear probing.
 
@@ -229,7 +229,7 @@ class QuadraticProbingHashTable:
     When collision occurs, check slots at i² distance.
     """
     
-    def __init__(self, capacity: int = 16) -> None:
+    def __init__(self, capacity: int = 16):
         """
         Initialize hash table with quadratic probing.
 
@@ -241,19 +241,19 @@ class QuadraticProbingHashTable:
             Space: O(n)   - Stores array.
         """
         self.capacity = capacity
-        self.table: List[Optional[Tuple[Any, Any]]] = [None] * capacity
+        self.table = [None] * capacity
         self.size = 0
     
-    def _hash(self, key: Any) -> int:
+    def _hash(self, key):
         """Hash function."""
         return hash(key) % self.capacity
     
-    def _probe(self, key: Any, i: int) -> int:
+    def _probe(self, key, i: int):
         """Quadratic probing: h(k, i) = (h(k) + i²) mod m"""
         base = self._hash(key)
         return (base + i * i) % self.capacity
     
-    def insert(self, key: Any, value: Any) -> bool:
+    def insert(self, key, value):
         """
         Insert key-value pair using quadratic probing.
 
@@ -277,7 +277,7 @@ class QuadraticProbingHashTable:
                 return True
         return False  # Table is full
     
-    def get(self, key: Any) -> Optional[Any]:
+    def get(self, key) -> Optional[Any]:
         """
         Get value for key using quadratic probing.
 

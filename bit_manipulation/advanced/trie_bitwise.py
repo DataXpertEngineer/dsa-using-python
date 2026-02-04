@@ -28,7 +28,7 @@ class BitwiseTrie:
     def __init__(self):
         self.root = {}
     
-    def insert(self, num: int) -> None:
+    def insert(self, num: int):
         """
         Insert number into trie.
 
@@ -46,7 +46,7 @@ class BitwiseTrie:
                 node[bit] = {}
             node = node[bit]
     
-    def find_max_xor(self, num: int) -> int:
+    def find_max_xor(self, num: int):
         """
         Find maximum XOR with given number.
 

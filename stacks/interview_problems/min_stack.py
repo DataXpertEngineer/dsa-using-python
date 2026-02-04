@@ -42,7 +42,7 @@ class MinStack:
     Approach: Store (value, current_min) pairs in stack.
     """
     
-    def __init__(self) -> None:
+    def __init__(self):
         """
         Initialize an empty min stack.
 
@@ -52,7 +52,7 @@ class MinStack:
         """
         self.stack: List[Tuple[int, int]] = []  # (value, min_so_far)
     
-    def push(self, val: int) -> None:
+    def push(self, val: int):
         """
         Push element onto stack.
 
@@ -69,7 +69,7 @@ class MinStack:
             current_min = min(val, self.stack[-1][1])
             self.stack.append((val, current_min))
     
-    def pop(self) -> None:
+    def pop(self):
         """
         Remove top element from stack.
 
@@ -122,7 +122,7 @@ class MinStackAuxiliary:
     More space efficient when many elements have same minimum.
     """
     
-    def __init__(self) -> None:
+    def __init__(self):
         """
         Initialize an empty min stack.
 
@@ -133,7 +133,7 @@ class MinStackAuxiliary:
         self.stack: List[int] = []
         self.min_stack: List[int] = []
     
-    def push(self, val: int) -> None:
+    def push(self, val: int):
         """
         Push element onto stack.
 
@@ -148,7 +148,7 @@ class MinStackAuxiliary:
         if not self.min_stack or val <= self.min_stack[-1]:
             self.min_stack.append(val)
     
-    def pop(self) -> None:
+    def pop(self):
         """
         Remove top element from stack.
 

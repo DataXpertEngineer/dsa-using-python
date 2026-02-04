@@ -44,7 +44,7 @@ class RangeXOR:
         for i in range(self.n):
             self.prefix_xor[i + 1] = self.prefix_xor[i] ^ nums[i]
     
-    def query(self, left: int, right: int) -> int:
+    def query(self, left: int, right: int):
         """
         Query XOR of range [left, right] (inclusive).
 
@@ -63,7 +63,7 @@ class RangeXOR:
         """
         return self.prefix_xor[right + 1] ^ self.prefix_xor[left]
     
-    def xor_all(self) -> int:
+    def xor_all(self):
         """
         Get XOR of entire array.
 

@@ -31,7 +31,7 @@ class HashTable:
     demonstrating hash table operations.
     """
     
-    def __init__(self, initial_capacity: int = 16) -> None:
+    def __init__(self, initial_capacity: int = 16):
         """
         Initialize an empty hash table.
 
@@ -42,11 +42,11 @@ class HashTable:
             Time: O(1)     - Constant time initialization.
             Space: O(1)   - Creates empty dictionary.
         """
-        self.table: Dict[Any, Any] = {}
+        self.table = {}
         self.capacity = initial_capacity
         self.size = 0
     
-    def insert(self, key: Any, value: Any) -> None:
+    def insert(self, key, value):
         """
         Insert or update key-value pair in hash table.
 
@@ -62,7 +62,7 @@ class HashTable:
             self.size += 1
         self.table[key] = value
     
-    def get(self, key: Any) -> Optional[Any]:
+    def get(self, key) -> Optional[Any]:
         """
         Get value associated with key.
 
@@ -78,7 +78,7 @@ class HashTable:
         """
         return self.table.get(key)
     
-    def delete(self, key: Any) -> bool:
+    def delete(self, key):
         """
         Delete key-value pair from hash table.
 
@@ -98,7 +98,7 @@ class HashTable:
             return True
         return False
     
-    def contains(self, key: Any) -> bool:
+    def contains(self, key):
         """
         Check if key exists in hash table.
 
@@ -114,7 +114,7 @@ class HashTable:
         """
         return key in self.table
     
-    def size(self) -> int:
+    def size(self):
         """
         Get number of key-value pairs in hash table.
 
@@ -127,7 +127,7 @@ class HashTable:
         """
         return self.size
     
-    def is_empty(self) -> bool:
+    def is_empty(self):
         """
         Check if hash table is empty.
 
@@ -166,7 +166,7 @@ class HashTable:
         """
         return list(self.table.values())
     
-    def clear(self) -> None:
+    def clear(self):
         """
         Remove all key-value pairs from hash table.
 
@@ -177,7 +177,7 @@ class HashTable:
         self.table.clear()
         self.size = 0
     
-    def __str__(self) -> str:
+    def __str__(self):
         """
         String representation of hash table.
 
@@ -186,7 +186,7 @@ class HashTable:
         """
         return f"HashTable({self.table})"
     
-    def __repr__(self) -> str:
+    def __repr__(self):
         """
         Official string representation of hash table.
 

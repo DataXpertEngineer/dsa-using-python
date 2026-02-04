@@ -27,7 +27,7 @@ class DequeQueue:
     Double-ended queue implementation using collections.deque.
     """
     
-    def __init__(self) -> None:
+    def __init__(self):
         """
         Initialize an empty deque.
 
@@ -37,7 +37,7 @@ class DequeQueue:
         """
         self.items = deque()
     
-    def enqueue_front(self, item: Any) -> None:
+    def enqueue_front(self, item):
         """
         Add element to front of deque.
 
@@ -50,7 +50,7 @@ class DequeQueue:
         """
         self.items.appendleft(item)
     
-    def enqueue_rear(self, item: Any) -> None:
+    def enqueue_rear(self, item):
         """
         Add element to rear of deque.
 
@@ -123,7 +123,7 @@ class DequeQueue:
             return None
         return self.items[-1]
     
-    def is_empty(self) -> bool:
+    def is_empty(self):
         """
         Check if deque is empty.
 
@@ -136,7 +136,7 @@ class DequeQueue:
         """
         return len(self.items) == 0
     
-    def size(self) -> int:
+    def size(self):
         """
         Get number of elements in deque.
 
@@ -149,7 +149,7 @@ class DequeQueue:
         """
         return len(self.items)
     
-    def __str__(self) -> str:
+    def __str__(self):
         """
         String representation of deque.
 

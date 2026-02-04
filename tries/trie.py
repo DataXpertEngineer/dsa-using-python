@@ -30,7 +30,7 @@ class TrieNode:
     - is_end_of_word: Boolean indicating if this node marks end of a word
     """
     
-    def __init__(self) -> None:
+    def __init__(self):
         """
         Initialize a trie node.
 
@@ -39,7 +39,7 @@ class TrieNode:
             Space: O(1)   - Creates empty node.
         """
         self.children: Dict[str, TrieNode] = {}
-        self.is_end_of_word: bool = False
+        self.is_end_of_word = False
 
 
 class Trie:
@@ -49,7 +49,7 @@ class Trie:
     A trie is used to store strings where common prefixes are shared.
     """
     
-    def __init__(self) -> None:
+    def __init__(self):
         """
         Initialize an empty trie.
 
@@ -60,7 +60,7 @@ class Trie:
         self.root = TrieNode()
         self.word_count = 0
     
-    def is_empty(self) -> bool:
+    def is_empty(self):
         """
         Check if trie is empty.
 
@@ -73,7 +73,7 @@ class Trie:
         """
         return self.word_count == 0
     
-    def size(self) -> int:
+    def size(self):
         """
         Get number of words in trie.
 
@@ -99,7 +99,7 @@ class Trie:
         """
         words: List[str] = []
         
-        def dfs(node: TrieNode, prefix: str) -> None:
+        def dfs(node: TrieNode, prefix: str):
             if node.is_end_of_word:
                 words.append(prefix)
             
@@ -109,7 +109,7 @@ class Trie:
         dfs(self.root, "")
         return words
     
-    def display(self) -> None:
+    def display(self):
         """
         Display all words in trie.
 

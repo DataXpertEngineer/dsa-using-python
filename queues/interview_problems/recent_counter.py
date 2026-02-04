@@ -50,7 +50,7 @@ class RecentCounter:
         self.window_size = window_size
         self.requests = deque()
     
-    def ping(self, t: int) -> int:
+    def ping(self, t: int):
         """
         Record a request at time t and return count of recent requests.
 
@@ -92,7 +92,7 @@ class RecentCounterList:
         self.window_size = window_size
         self.requests: list[int] = []
     
-    def ping(self, t: int) -> int:
+    def ping(self, t: int):
         """
         Record a request at time t and return count of recent requests.
 

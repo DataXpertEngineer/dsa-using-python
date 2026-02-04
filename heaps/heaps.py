@@ -34,7 +34,7 @@ class Heap:
     For max-heap, negate values or use custom comparator.
     """
     
-    def __init__(self) -> None:
+    def __init__(self):
         """
         Initialize an empty heap.
 
@@ -42,9 +42,9 @@ class Heap:
             Time: O(1)     - Constant time initialization.
             Space: O(1)   - Creates empty list.
         """
-        self.items: List[Any] = []
+        self.items = []
     
-    def insert(self, item: Any) -> None:
+    def insert(self, item):
         """
         Insert element into heap.
 
@@ -87,7 +87,7 @@ class Heap:
             return None
         return self.items[0]
     
-    def is_empty(self) -> bool:
+    def is_empty(self):
         """
         Check if heap is empty.
 
@@ -100,7 +100,7 @@ class Heap:
         """
         return len(self.items) == 0
     
-    def size(self) -> int:
+    def size(self):
         """
         Get number of elements in heap.
 
@@ -113,7 +113,7 @@ class Heap:
         """
         return len(self.items)
     
-    def heapify(self, arr: List[Any]) -> None:
+    def heapify(self, arr: List[Any]):
         """
         Build heap from array in-place.
 
@@ -127,7 +127,7 @@ class Heap:
         self.items = arr
         heapq.heapify(self.items)
     
-    def clear(self) -> None:
+    def clear(self):
         """
         Remove all elements from heap.
 
@@ -137,7 +137,7 @@ class Heap:
         """
         self.items.clear()
     
-    def __str__(self) -> str:
+    def __str__(self):
         """
         String representation of heap.
 
@@ -146,7 +146,7 @@ class Heap:
         """
         return f"Heap({self.items})"
     
-    def __repr__(self) -> str:
+    def __repr__(self):
         """
         Official string representation of heap.
 
